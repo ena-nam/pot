@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body {
+	background-color : #CBC8C7;
+}
+
+#fullscreen {
+	width : 100%;
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	align-items : center;
+	margin-top : 50px;
+}
+
+input[type=text], input[type=password] {
+	width : 400px;
+	height : 40px;
+	padding : 5px;
+	margin : 10px;
+}
+
+input[type=submit] {
+	width : 410px;
+	height : 40px;
+	background-color : black;
+	color : white;
+	padding : 5px;
+	margin : 10px;
+}
+
+select {
+	width : 410px;
+	height : 50px;
+	margin : 10px;
+	padding : 5px;
+}
+
+#size, #order {
+	width : 400px;
+	height : 50px;
+	display : flex;
+	justify-content : space-around;
+	align-items : center;
+	padding : 5px;
+	margin : 10px;
+}
+
+textarea {
+	width : 400px;
+	height : 50px;
+}
+
+.sub {
+	width : 90px;
+	height : 30px;
+	background-color : white;
+	margin : 10px;
+	padding : 5px;
+	text-align : center;
+}
+
+.plus {
+	width : 400px;
+	height : 50px;
+	display : flex;
+	justify-content : space-around;
+	align-items : ceter;
+	padding : 5px;
+	margin : 10px;
+	text-align : center;
+    line-height : 50px;
+    background-color : white;
+}
+
+button {
+	width : 30px;
+	height : 30px;
+}
+
+#plus1, #plus2, #plus3 {
+	width : 50px;
+	height : 30px;
+	text-align : center;
+}
+
+#price, #ship {
+	width : 400px;
+	height : 60px;
+}
+
+h3 {
+	margin-left : 10px;
+}
+
+#total, #shipping {
+	font-size : 24px;
+	text-align : right;
+}

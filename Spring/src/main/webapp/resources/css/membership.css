@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body {
+	background-color : #CBC8C7;
+}
+
+#fullscreen {
+	width : 100%;
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	align-items : center;
+	margin-top : 50px;
+}
+
+input[type=text], input[type=password] {
+	width : 400px;
+	height : 40px;
+	padding : 5px;
+	margin : 10px;
+}
+
+input[type=submit] {
+	width : 410px;
+	height : 40px;
+	background-color : black;
+	color : white;
+	padding : 5px;
+	margin : 10px;
+}
+
+#yy, #mm, #dd {
+	width : 120px;
+}
+
+#mm {
+	height : 50px;
+}
+
+#gender {
+	width : 410px;
+	height : 50px;
+	padding : 5px;
+	margin : 10px;
+}
+
+h3 {
+	margin-left : 10px;
+}

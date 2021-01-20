@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/* 맨 위의 이미지 */
+#subscription {
+	width : 100%;
+	height : 600px;
+	display : flex;
+	justify-content : center;
+	align-items : flex-end;
+}
+
+.imgbox {
+	width : 400px;
+	height : 80%;
+	margin : 10px;
+	box-shadow: 0px 1px 13px 3px rgba(121,118,114,0.31);
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	align-items : center;
+}
+
+#img {
+	background-color : #bdac96;
+	width : 90%;
+	height : 85%;
+}
+
+#img2, #img3 {
+	background-color : #bdac96;
+	width : 90%;
+	height : 40%;
+	margin : 10px;
+}
+
+
+/* 두 번째 div. 아이템 사진 */
+
+.main {
+	width : 100%;
+	height : 600px;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+	flex-direction : column;
+}
+
+.Title {
+	width : 80%;
+	height : 100px;
+	display : flex;
+	align-items : flex-end;
+}
+
+.Title > a {
+	font-size : 32px;
+	font-weight : bold;
+	margin-left : 10px;
+	margin-right : 20px;
+}
+
+.Box {
+	width : 80%;
+	height : 500px;
+	display : flex;
+	justify-content : space-around;
+	align-items : center;
+}
+
+.Item {
+	width : 300px;
+	height : 80%;
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	align-items : center;
+	transition : all 1.5s;
+}
+
+.Item:hover {
+	background-color : gold;
+}
+
+#item1, #item2, #item3, #item4 {
+	width : 280px;
+	height : 280px;
+	background-color : white;
+	margin : 10px;
+	border : 1px solid black;
+}
+
+/* 하는 방법 */
+#how {
+	width : 100%;
+	height : 600px;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+}
+
+/* 신청하기 */
+#call {
+	width : 100%;
+	height : 200px;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+	text-align : center;
+	
+}
+
+#call > a {
+	display : block;
+	width : 300px;
+	height : 80px;
+	line-height : 80px;
+	background-color : gold;
+	font-size : 24px;
+	margin : 0 auto;
+}
+
+#call > a:hover {
+	text-decoration : none;
+	background-color : orange;
+}
+
+
+
+
+
+

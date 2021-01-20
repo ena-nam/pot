@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="org.nsy.mapper.OrderDAO">
+  
+  	<insert id="sub_order">
+  		insert into
+  		subOrder(orderName, orderTerm, orderPlus1, orderPlus2, orderPlus3, orderShip, orderPrice) 
+  		values(#{orderName}, #{orderTerm}, #{orderPlus1}, #{orderPlus2}, #{orderPlus3}, #{orderShip}, #{orderPrice});	
+  	</insert>
+  	
+  	<insert id="customOrder">
+  		insert into
+  		customOrder(orderName, orderSize, orderOther, orderPlus1, orderPlus2, orderPlus3, orderShip, orderPrice)
+  		values(#{orderName}, #{orderSize}, #{orderOther}, #{orderPlus1}, #{orderPlus2}, #{orderPlus3}, #{orderShip}, #{orderPrice});
+  	</insert>
+  	
+  	<select id="list" resultType="org.nsy.DTO.sub_orderDTO">
+  		select * 
+		from (select @rownum:=@rownum +1 as rownum, b.*
+			  from (select @rownum:=0) as tme, subOrder as b
+			  order by orderNo desc
+			  ) as pagingboard
+		<![CDATA[
+		where rownum >= ((#{pageNum}-1) * #{amount}) 
+		  and rownum <= (#{pageNum} * #{amount});
+		]]>
+		
+  	</select>
+  	
+  	<select id="customList" resultType="org.nsy.DTO.CustomDTO">
+  		select * from customOrder;
+  	</select>
+  	
+  	<select id="getTotal" resultType="int">
+  		select count(*) from subOrder;
+  	</select>
+  </mapper>

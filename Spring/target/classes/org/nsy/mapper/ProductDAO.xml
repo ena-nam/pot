@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="org.nsy.mapper.ProductDAO">
+ 
+  	<select id="list" resultType="org.nsy.DTO.productDTO">
+  		select * from productBoard;
+  	</select>
+  	
+  	<select id="detail" resultType="org.nsy.DTO.productDTO">
+  		select * from productBoard where pno=#{pno};
+  	</select>
+  	
+  	<insert id="newItem">
+  		insert into productBoard(pimage, pname, pcontent, pprice)
+  		values(#{pimage}, #{pname}, #{pcontent}, #{pprice});
+  	</insert>
+  	
+  	<update id="modify">
+  		update productBoard 
+  		set pname=#{pname}, pimage=#{pimage}, pcontent=#{pcontent}, pprice=#{pprice} 
+  		where pno=#{pno};
+  	</update>
+  	
+  	<delete id="delete">
+  		delete from productBoard where pno=#{pno};
+  	</delete>
+  </mapper>

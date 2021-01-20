@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.main {
+	width : 100%;
+	height : auto;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+	flex-direction : column;
+}
+
+.Title {
+	width : 80%;
+	height : 200px;
+	display : flex;
+	align-items : flex-end;
+}
+
+#img {
+	width : 500px;
+	height : 600px;
+	border : 1px solid black;
+}
+
+#content {
+	display : flex;
+}
+
+table {
+	width : 600px;
+	margin : 10px;
+}
+
+tr {
+	height : 30px;
+}
+

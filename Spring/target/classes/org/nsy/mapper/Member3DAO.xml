@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="org.nsy.mapper.Member3DAO">
+  
+  	<select id="list" resultType="org.nsy.DTO.Member4DTO">
+  		select *
+		from ( select @rownum:=@rownum+1 as rownum, b.*
+				from (select @rownum:=0) as tmp, board2 as b
+				<if test='select=="id"'>
+					where id like concat('%', #{keyword}, '%')
+				</if>
+				<if test='select=="name"'>
+					where name like concat('%', #{keyword}, '%')
+				</if>
+				<if test='select=="email"'>
+					where email like concat('%', #{keyword}, '%')
+				</if>
+				) as page
+		<![CDATA[
+			where rownum>(#{pageNum}-1)*#{amount} and rownum<=(#{pageNum}*#{amount})
+		]]>
+  	</select>
+  	
+  	<select id="total" resultType="int">
+  		select count(*) from board2
+  		<if test='select=="id"'>
+			where id like concat('%', #{keyword}, '%')
+		</if>
+		<if test='select=="name"'>
+			where name like concat('%', #{keyword}, '%')
+		</if>
+		<if test='select=="email"'>
+			where email like concat('%', #{keyword}, '%')
+		</if>
+  	</select>
+  </mapper>
